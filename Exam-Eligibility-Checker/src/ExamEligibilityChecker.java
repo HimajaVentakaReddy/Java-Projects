@@ -61,7 +61,6 @@ public class ExamEligibilityChecker {
         }
 
         System.out.println("==================================");
-
         scanner.close();
     }
 }

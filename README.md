@@ -1,4 +1,4 @@
-﻿# ☕ Java Projects Portfolio
+# ☕ Java Projects Portfolio
 
 This repository contains my Java projects created while learning and applying Core Java, object-oriented programming, collections, file handling, algorithms, and software design.
 
@@ -33,6 +33,22 @@ A beginner-friendly Java console application that checks whether a person is eli
 - Handles negative age input
 
 📁 [View Driving Licence Eligibility Checker](Driving-Licence-Eligibility-Checker)
+
+---
+
+### 3. Exam Eligibility Checker
+
+A beginner-friendly Java console application that checks whether a student is eligible to attend an examination.
+
+#### Key Features
+
+- Accepts the student name and USN
+- Checks whether attendance is at least 75%
+- Checks whether internal marks are at least 40
+- Verifies examination fee payment
+- Displays reasons when the student is not eligible
+
+📁 [View Exam Eligibility Checker](Exam-Eligibility-Checker)
 
 ---
 

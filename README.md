@@ -1,4 +1,4 @@
-# ☕ Java Projects Portfolio
+﻿# ☕ Java Projects Portfolio
 
 This repository contains my Java projects created while learning and applying Core Java, object-oriented programming, collections, file handling, algorithms, and software design.
 
@@ -38,17 +38,33 @@ A beginner-friendly Java console application that checks whether a person is eli
 
 ### 3. Exam Eligibility Checker
 
-A beginner-friendly Java console application that checks whether a student is eligible to attend an examination.
+A Java console application that checks whether a student is eligible to attend an examination.
 
 #### Key Features
 
-- Accepts the student name and USN
-- Checks whether attendance is at least 75%
-- Checks whether internal marks are at least 40
-- Verifies examination fee payment
-- Displays reasons when the student is not eligible
+- Accepts student name and USN
+- Checks attendance percentage
+- Checks internal marks
+- Checks examination fee status
+- Displays reasons for ineligibility
 
 📁 [View Exam Eligibility Checker](Exam-Eligibility-Checker)
+
+---
+
+### 4. Restaurant Bill Calculator
+
+A beginner-friendly Java console application that calculates a restaurant bill using item price, quantity, discount, and GST.
+
+#### Key Features
+
+- Calculates the subtotal
+- Provides a 10% discount for bills of ₹500 or more
+- Adds 5% GST after applying the discount
+- Validates incorrect price and quantity values
+- Generates a formatted bill receipt
+
+📁 [View Restaurant Bill Calculator](Restaurant-Bill-Calculator)
 
 ---
 

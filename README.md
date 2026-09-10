@@ -1,4 +1,4 @@
-﻿# ☕ Java Projects Portfolio
+# ☕ Java Projects Portfolio
 
 This repository contains my Java projects created while learning and applying Core Java, object-oriented programming, collections, file handling, algorithms, and software design.
 
@@ -68,6 +68,21 @@ A beginner-friendly Java console application that calculates a restaurant bill u
 
 ---
 
+### 5. Electricity Bill Calculator
+
+A beginner-friendly Java console application that calculates an electricity bill based on the number of units consumed.
+
+#### Key Features
+
+- Accepts customer name and consumed units
+- Calculates the bill using unit-based rates
+- Uses simple `if-else` conditions
+- Validates negative unit input
+- Displays a clear electricity bill receipt
+
+📁 [View Electricity Bill Calculator](Electricity-Bill-Calculator)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

@@ -83,6 +83,23 @@ A beginner-friendly Java console application that calculates an electricity bill
 📁 [View Electricity Bill Calculator](Electricity-Bill-Calculator)
 
 ---
+### 6. Free Delivery Eligibility Checker
+
+A beginner-friendly Java console application that checks whether an online shopping order qualifies for free delivery.
+
+#### Key Features
+
+- Supports food, clothes, and electronics orders
+- Uses category-based free-delivery limits
+- Validates category and order amount
+- Calculates the remaining amount for free delivery
+- Applies category-based delivery charges
+- Displays the final payable amount
+- Generates a formatted order summary
+
+📁 [View Free Delivery Eligibility Checker](Free-Delivery-Eligibility-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

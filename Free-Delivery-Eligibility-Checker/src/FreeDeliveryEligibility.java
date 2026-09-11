@@ -20,26 +20,27 @@ public class FreeDeliveryEligibility {
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
 
-        System.out.print("Enter order amount: Rs. ");
-        double orderAmount = scanner.nextDouble();
-
         String category;
         double minimumAmount;
+        double deliveryCharge;
 
         switch (choice) {
             case 1:
                 category = "Food";
                 minimumAmount = 299;
+                deliveryCharge = 40;
                 break;
 
             case 2:
                 category = "Clothes";
                 minimumAmount = 499;
+                deliveryCharge = 60;
                 break;
 
             case 3:
                 category = "Electronics";
                 minimumAmount = 999;
+                deliveryCharge = 100;
                 break;
 
             default:
@@ -48,20 +49,42 @@ public class FreeDeliveryEligibility {
                 return;
         }
 
-        System.out.println("\nHello, " + customerName + "!");
-        System.out.println("Order Category: " + category);
-        System.out.printf("Order Amount: Rs. %.2f%n", orderAmount);
+        System.out.print("Enter order amount: Rs. ");
+        double orderAmount = scanner.nextDouble();
+
+        if (orderAmount <= 0) {
+            System.out.println("\nInvalid order amount.");
+            System.out.println("Order amount must be greater than zero.");
+            scanner.close();
+            return;
+        }
+
+        double finalAmount;
+
+        System.out.println("\n==========================================");
+        System.out.println("              ORDER SUMMARY");
+        System.out.println("==========================================");
+        System.out.println("Customer Name   : " + customerName);
+        System.out.println("Order Category  : " + category);
+        System.out.printf("Order Amount    : Rs. %.2f%n", orderAmount);
 
         if (orderAmount >= minimumAmount) {
-            System.out.println("Congratulations! You are eligible for free delivery.");
+            deliveryCharge = 0;
+            finalAmount = orderAmount;
+
+            System.out.println("Delivery Status : FREE DELIVERY");
         } else {
+            finalAmount = orderAmount + deliveryCharge;
             double remainingAmount = minimumAmount - orderAmount;
 
-            System.out.println("You are not eligible for free delivery.");
-            System.out.printf(
-                    "Add items worth Rs. %.2f more to get free delivery.%n",
+            System.out.println("Delivery Status : DELIVERY CHARGE APPLIED");
+            System.out.printf("Add Rs. %.2f more to receive free delivery.%n",
                     remainingAmount);
         }
+
+        System.out.printf("Delivery Charge : Rs. %.2f%n", deliveryCharge);
+        System.out.printf("Final Amount    : Rs. %.2f%n", finalAmount);
+        System.out.println("==========================================");
 
         scanner.close();
     }

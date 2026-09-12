@@ -100,6 +100,23 @@ A beginner-friendly Java console application that checks whether an online shopp
 📁 [View Free Delivery Eligibility Checker](Free-Delivery-Eligibility-Checker)
 
 ---
+### 7. Mobile Data Usage Alert
+
+A beginner-friendly Java console application that monitors mobile data consumption and provides smart alerts based on the usage percentage.
+
+#### Key Features
+
+- Calculates used and remaining mobile data
+- Calculates the data usage percentage
+- Displays five data-usage levels
+- Detects when the data limit is exceeded
+- Provides smart usage alerts
+- Validates incorrect input values
+- Generates a formatted data summary
+
+📁 [View Mobile Data Usage Alert](Mobile-Data-Usage-Alert)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

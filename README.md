@@ -117,6 +117,23 @@ A beginner-friendly Java console application that monitors mobile data consumpti
 📁 [View Mobile Data Usage Alert](Mobile-Data-Usage-Alert)
 
 ---
+### 8. Login Attempt Checker
+
+A beginner-friendly Java console application that validates user credentials and locks access after three unsuccessful login attempts.
+
+#### Key Features
+
+- Validates username and password
+- Allows a maximum of three login attempts
+- Displays the remaining attempts
+- Rejects empty input fields
+- Grants access for valid credentials
+- Locks access after repeated failures
+- Generates a formatted login status
+
+📁 [View Login Attempt Checker](Login-Attempt-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

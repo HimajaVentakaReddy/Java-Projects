@@ -7,7 +7,6 @@ This repository contains my Java projects created while learning and applying Co
 ### 1. BillWise — Smart Invoice Anomaly Detection Engine
 
 A Java application that analyzes invoice data and identifies possible anomalies.
-
 #### Key Features
 
 - Detects duplicate invoices

@@ -133,6 +133,22 @@ A beginner-friendly Java console application that validates user credentials and
 📁 [View Login Attempt Checker](Login-Attempt-Checker)
 
 ---
+### 9. Parking Fee Calculator
+
+A beginner-friendly Java console application that calculates parking charges based on the vehicle category and parking duration.
+
+#### Key Features
+
+- Supports bike, car, and heavy-vehicle categories
+- Applies category-based parking rates
+- Includes a base charge for the first two hours
+- Calculates additional-hour charges
+- Validates customer and parking details
+- Generates a formatted parking receipt
+
+📁 [View Parking Fee Calculator](Parking-Fee-Calculator)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

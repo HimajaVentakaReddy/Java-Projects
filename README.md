@@ -149,6 +149,22 @@ A beginner-friendly Java console application that calculates parking charges bas
 📁 [View Parking Fee Calculator](Parking-Fee-Calculator)
 
 ---
+### 10. Water Bill Calculator
+
+A beginner-friendly Java console application that calculates water charges using progressive tariff slabs and provides water-usage alerts.
+
+#### Key Features
+
+- Calculates progressive slab-based water charges
+- Adds a fixed service charge
+- Validates customer and consumption details
+- Displays low, moderate, or high usage
+- Provides water-conservation suggestions
+- Generates a formatted water bill
+
+📁 [View Water Bill Calculator](Water-Bill-Calculator)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

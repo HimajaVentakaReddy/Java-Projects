@@ -165,6 +165,24 @@ A beginner-friendly Java console application that calculates water charges using
 📁 [View Water Bill Calculator](Water-Bill-Calculator)
 
 ---
+### 11. Student Pass/Fail Checker
+
+A beginner-friendly Java console application that evaluates subject marks and generates a complete academic result report.
+
+#### Key Features
+
+- Evaluates marks in five subjects
+- Displays subject-wise pass/fail status
+- Calculates total and average marks
+- Counts failed subjects
+- Assigns academic grades
+- Displays performance classification
+- Validates marks and student details
+- Generates a formatted result report
+
+📁 [View Student Pass/Fail Checker](Student-Pass-Fail-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

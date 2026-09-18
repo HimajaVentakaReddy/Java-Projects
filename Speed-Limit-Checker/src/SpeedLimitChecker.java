@@ -4,25 +4,37 @@ public class SpeedLimitChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("======================================");
-        System.out.println("        SPEED LIMIT CHECKER");
-        System.out.println("======================================");
+        System.out.println("==========================================");
+        System.out.println("          SPEED LIMIT CHECKER");
+        System.out.println("==========================================");
         System.out.println("Road Categories:");
-        System.out.println("1. School Zone");
-        System.out.println("2. City Road");
-        System.out.println("3. Highway");
+        System.out.println("1. School Zone  - 30 km/h");
+        System.out.println("2. City Road    - 50 km/h");
+        System.out.println("3. Highway      - 100 km/h");
 
         System.out.print("\nEnter driver name: ");
-        String driverName = scanner.nextLine();
+        String driverName = scanner.nextLine().trim();
 
         System.out.print("Enter vehicle number: ");
-        String vehicleNumber = scanner.nextLine();
+        String vehicleNumber = scanner.nextLine().trim().toUpperCase();
 
         System.out.print("Select road category (1-3): ");
         int roadChoice = scanner.nextInt();
 
         System.out.print("Enter vehicle speed in km/h: ");
         double vehicleSpeed = scanner.nextDouble();
+
+        if (driverName.isEmpty() || vehicleNumber.isEmpty()) {
+            System.out.println("\nInvalid input: Driver and vehicle details are required.");
+            scanner.close();
+            return;
+        }
+
+        if (vehicleSpeed < 0) {
+            System.out.println("\nInvalid input: Vehicle speed cannot be negative.");
+            scanner.close();
+            return;
+        }
 
         String roadType;
         double speedLimit;
@@ -44,31 +56,50 @@ public class SpeedLimitChecker {
                 break;
 
             default:
-                System.out.println("\nInvalid road category.");
+                System.out.println("\nInvalid input: Select a road category from 1 to 3.");
                 scanner.close();
                 return;
         }
 
-        double speedDifference = vehicleSpeed - speedLimit;
+        double exceededSpeed = Math.max(vehicleSpeed - speedLimit, 0);
+        double fineAmount;
+        String violationLevel;
+        String safetyMessage;
 
-        System.out.println("\n------------ SPEED REPORT ------------");
-        System.out.println("Driver Name    : " + driverName);
-        System.out.println("Vehicle Number : " + vehicleNumber.toUpperCase());
-        System.out.println("Road Type      : " + roadType);
-        System.out.printf("Vehicle Speed  : %.2f km/h%n", vehicleSpeed);
-        System.out.printf("Speed Limit    : %.2f km/h%n", speedLimit);
-
-        if (speedDifference <= 0) {
-            System.out.println("Status         : WITHIN SPEED LIMIT");
-            System.out.printf("Available Limit: %.2f km/h%n",
-                    Math.abs(speedDifference));
+        if (exceededSpeed == 0) {
+            fineAmount = 0;
+            violationLevel = "NO VIOLATION";
+            safetyMessage = "Thank you for following the speed limit.";
+        } else if (exceededSpeed <= 10) {
+            fineAmount = 500;
+            violationLevel = "MINOR VIOLATION";
+            safetyMessage = "Reduce speed and drive carefully.";
+        } else if (exceededSpeed <= 20) {
+            fineAmount = 1000;
+            violationLevel = "MODERATE VIOLATION";
+            safetyMessage = "Overspeeding increases accident risk.";
+        } else if (exceededSpeed <= 40) {
+            fineAmount = 2000;
+            violationLevel = "MAJOR VIOLATION";
+            safetyMessage = "Slow down immediately and follow road rules.";
         } else {
-            System.out.println("Status         : OVERSPEEDING");
-            System.out.printf("Limit Exceeded : %.2f km/h%n",
-                    speedDifference);
+            fineAmount = 5000;
+            violationLevel = "SEVERE VIOLATION";
+            safetyMessage = "Dangerous driving detected. Immediate action required.";
         }
 
-        System.out.println("--------------------------------------");
+        System.out.println("\n------------- SPEED REPORT -------------");
+        System.out.println("Driver Name     : " + driverName);
+        System.out.println("Vehicle Number  : " + vehicleNumber);
+        System.out.println("Road Type       : " + roadType);
+        System.out.printf("Vehicle Speed   : %.2f km/h%n", vehicleSpeed);
+        System.out.printf("Permitted Limit : %.2f km/h%n", speedLimit);
+        System.out.printf("Exceeded Speed  : %.2f km/h%n", exceededSpeed);
+        System.out.println("Violation Level : " + violationLevel);
+        System.out.printf("Fine Amount     : Rs. %.2f%n", fineAmount);
+        System.out.println("----------------------------------------");
+        System.out.println("Safety Message  : " + safetyMessage);
+        System.out.println("========================================");
 
         scanner.close();
     }

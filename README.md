@@ -183,6 +183,24 @@ A beginner-friendly Java console application that evaluates subject marks and ge
 📁 [View Student Pass/Fail Checker](Student-Pass-Fail-Checker)
 
 ---
+### 12. Speed Limit Checker
+
+A beginner-friendly Java console application that detects overspeeding using road-specific limits and generates a detailed violation report.
+
+#### Key Features
+
+- Supports school zones, city roads, and highways
+- Applies road-specific speed limits
+- Calculates exceeded speed
+- Classifies violation severity
+- Calculates demonstration fine amounts
+- Validates driver and vehicle details
+- Provides road-safety guidance
+- Generates a formatted speed report
+
+📁 [View Speed Limit Checker](Speed-Limit-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

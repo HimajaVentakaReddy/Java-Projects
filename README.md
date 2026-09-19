@@ -201,6 +201,24 @@ A beginner-friendly Java console application that detects overspeeding using roa
 📁 [View Speed Limit Checker](Speed-Limit-Checker)
 
 ---
+### 13. Blood Donation Eligibility Checker
+
+An educational Java console application that performs a preliminary blood-donation eligibility check using basic donor details.
+
+#### Key Features
+
+- Checks donor age, weight, and haemoglobin
+- Records general health and recent illness
+- Supports first-time donors
+- Checks the previous donation gap
+- Displays passed and failed requirements
+- Provides detailed ineligibility reasons
+- Validates donor input
+- Includes a professional medical-screening disclaimer
+
+📁 [View Blood Donation Eligibility Checker](Blood-Donation-Eligibility-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

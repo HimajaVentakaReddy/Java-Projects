@@ -219,6 +219,23 @@ An educational Java console application that performs a preliminary blood-donati
 📁 [View Blood Donation Eligibility Checker](Blood-Donation-Eligibility-Checker)
 
 ---
+### 14. Scholarship Eligibility Checker
+
+A Java console application that evaluates students for merit, need-based, and sports scholarships.
+
+#### Key Features
+
+- Supports three scholarship types
+- Evaluates marks and attendance
+- Checks family income and sports certification
+- Assigns demonstration scholarship amounts
+- Displays failed eligibility conditions
+- Validates student information
+- Generates a formatted scholarship report
+
+📁 [View Scholarship Eligibility Checker](Scholarship-Eligibility-Checker)
+
+---
 ## 🛠️ Technologies Used
 
 - Java 17

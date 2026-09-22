@@ -235,6 +235,22 @@ A Java console application that evaluates students for merit, need-based, and sp
 
 📁 [View Scholarship Eligibility Checker](Scholarship-Eligibility-Checker)
 
+### 15. Job Eligibility Checker
+
+A beginner-friendly Java console application that checks whether a candidate is eligible for a job based on age and required qualification.
+
+#### Key Features
+
+- Accepts candidate name and age
+- Checks minimum age requirement
+- Validates required qualification
+- Supports different job types
+- Handles invalid age input
+- Displays clear eligibility status
+
+📁 [View Job Eligibility Checker](Job-Eligibility-Checker)
+
+---
 ---
 ## 🛠️ Technologies Used
 

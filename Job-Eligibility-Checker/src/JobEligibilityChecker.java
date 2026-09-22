@@ -14,18 +14,20 @@ public class JobEligibilityChecker {
 
         sc.nextLine();
 
+        if (age < 0) {
+            System.out.println("Invalid age.");
+            sc.close();
+            return;
+        }
+
         System.out.print("Do you have the required qualification? (yes/no): ");
         String qualification = sc.nextLine();
 
         if (age >= 18 && qualification.equalsIgnoreCase("yes")) {
-            System.out.println("\nJob Eligibility Result");
-            System.out.println("----------------------");
-            System.out.println("Name: " + name);
+            System.out.println("\nName: " + name);
             System.out.println("Status: Eligible for Job");
         } else {
-            System.out.println("\nJob Eligibility Result");
-            System.out.println("----------------------");
-            System.out.println("Name: " + name);
+            System.out.println("\nName: " + name);
             System.out.println("Status: Not Eligible for Job");
         }
 

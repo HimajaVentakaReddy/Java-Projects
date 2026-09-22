@@ -19,14 +19,28 @@ public class JobEligibilityChecker {
             return;
         }
 
+        System.out.println("\nSelect Job Type:");
+        System.out.println("1. Software Job");
+        System.out.println("2. Government Job");
+        System.out.println("3. General Job");
+
+        System.out.print("Enter choice: ");
+        int choice = sc.nextInt();
+        sc.nextLine();
+
         System.out.print("Do you have the required qualification? (yes/no): ");
         String qualification = sc.nextLine();
 
-        if (age >= 18 && qualification.equalsIgnoreCase("yes")) {
-            System.out.println("\nName: " + name);
+        boolean eligible = age >= 18 &&
+                           qualification.equalsIgnoreCase("yes");
+
+        System.out.println("\nJob Eligibility Result");
+        System.out.println("----------------------");
+        System.out.println("Name: " + name);
+
+        if (eligible) {
             System.out.println("Status: Eligible for Job");
         } else {
-            System.out.println("\nName: " + name);
             System.out.println("Status: Not Eligible for Job");
         }
 

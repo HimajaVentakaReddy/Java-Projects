@@ -11,7 +11,6 @@ public class JobEligibilityChecker {
 
         System.out.print("Enter your age: ");
         int age = sc.nextInt();
-
         sc.nextLine();
 
         if (age < 0) {

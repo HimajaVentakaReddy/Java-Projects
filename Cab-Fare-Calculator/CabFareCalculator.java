@@ -14,6 +14,9 @@ public class CabFareCalculator {
         System.out.print("Enter distance in km: ");
         double distance = sc.nextDouble();
 
+        System.out.print("Is it night ride? (yes/no): ");
+        String night = sc.next();
+
         double rate = 15;
 
         if (cabType.equalsIgnoreCase("Bike")) {
@@ -23,6 +26,10 @@ public class CabFareCalculator {
         }
 
         double fare = distance * rate;
+
+        if (night.equalsIgnoreCase("yes")) {
+            fare = fare + 50;
+        }
 
         System.out.println("\n--- Cab Fare Receipt ---");
         System.out.println("Passenger: " + name);

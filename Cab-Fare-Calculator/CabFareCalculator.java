@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class CabFareCalculator {
@@ -9,13 +8,25 @@ public class CabFareCalculator {
         System.out.print("Enter passenger name: ");
         String name = sc.nextLine();
 
+        System.out.print("Enter cab type (Bike/Auto/Car): ");
+        String cabType = sc.nextLine();
+
         System.out.print("Enter distance in km: ");
         double distance = sc.nextDouble();
 
-        double fare = distance * 15;
+        double rate = 15;
+
+        if (cabType.equalsIgnoreCase("Bike")) {
+            rate = 10;
+        } else if (cabType.equalsIgnoreCase("Auto")) {
+            rate = 12;
+        }
+
+        double fare = distance * rate;
 
         System.out.println("\n--- Cab Fare Receipt ---");
         System.out.println("Passenger: " + name);
+        System.out.println("Cab Type: " + cabType);
         System.out.println("Distance: " + distance + " km");
         System.out.println("Fare: Rs. " + fare);
 

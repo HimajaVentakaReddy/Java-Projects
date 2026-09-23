@@ -14,6 +14,12 @@ public class CabFareCalculator {
         System.out.print("Enter distance in km: ");
         double distance = sc.nextDouble();
 
+        if (distance <= 0) {
+            System.out.println("Invalid distance!");
+            sc.close();
+            return;
+        }
+
         System.out.print("Is it night ride? (yes/no): ");
         String night = sc.next();
 
@@ -23,6 +29,10 @@ public class CabFareCalculator {
             rate = 10;
         } else if (cabType.equalsIgnoreCase("Auto")) {
             rate = 12;
+        } else if (!cabType.equalsIgnoreCase("Car")) {
+            System.out.println("Invalid cab type!");
+            sc.close();
+            return;
         }
 
         double fare = distance * rate;

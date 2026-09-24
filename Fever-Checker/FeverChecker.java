@@ -11,6 +11,12 @@ public class FeverChecker {
         System.out.print("Enter your temperature in Celsius: ");
         double temperature = sc.nextDouble();
 
+        if (temperature < 0) {
+            System.out.println("Invalid temperature!");
+            sc.close();
+            return;
+        }
+
         System.out.println("\n--- Temperature Report ---");
         System.out.println("Name: " + name);
         System.out.println("Temperature: " + temperature + " C");

@@ -1,10 +1,10 @@
-﻿# â˜• Java Projects Portfolio
+﻿# ☕ Java Projects Portfolio
 
 This repository contains my Java projects created while learning and applying Core Java, object-oriented programming, collections, file handling, algorithms, and software design.
 
-## ðŸ“‚ Projects
+## 📂 Projects
 
-### 1. BillWise â€” Smart Invoice Anomaly Detection Engine
+### 1. BillWise — Smart Invoice Anomaly Detection Engine
 
 A Java application that analyzes invoice data and identifies possible anomalies.
 #### Key Features
@@ -16,7 +16,7 @@ A Java application that analyzes invoice data and identifies possible anomalies.
 - Identifies future-dated invoices
 - Checks for missing vendor information
 
-ðŸ“ [View BillWise Project](BillWise-Smart-Invoice-Anomaly-Detection-Engine)
+📁 [View BillWise Project](BillWise-Smart-Invoice-Anomaly-Detection-Engine)
 
 ---
 
@@ -31,7 +31,7 @@ A beginner-friendly Java console application that checks whether a person is eli
 - Displays the remaining years for eligibility
 - Handles negative age input
 
-ðŸ“ [View Driving Licence Eligibility Checker](Driving-Licence-Eligibility-Checker)
+📁 [View Driving Licence Eligibility Checker](Driving-Licence-Eligibility-Checker)
 
 ---
 
@@ -47,7 +47,7 @@ A Java console application that checks whether a student is eligible to attend a
 - Checks examination fee status
 - Displays reasons for ineligibility
 
-ðŸ“ [View Exam Eligibility Checker](Exam-Eligibility-Checker)
+📁 [View Exam Eligibility Checker](Exam-Eligibility-Checker)
 
 ---
 
@@ -58,12 +58,12 @@ A beginner-friendly Java console application that calculates a restaurant bill u
 #### Key Features
 
 - Calculates the subtotal
-- Provides a 10% discount for bills of â‚¹500 or more
+- Provides a 10% discount for bills of ₹500 or more
 - Adds 5% GST after applying the discount
 - Validates incorrect price and quantity values
 - Generates a formatted bill receipt
 
-ðŸ“ [View Restaurant Bill Calculator](Restaurant-Bill-Calculator)
+📁 [View Restaurant Bill Calculator](Restaurant-Bill-Calculator)
 
 ---
 
@@ -79,7 +79,7 @@ A beginner-friendly Java console application that calculates an electricity bill
 - Validates negative unit input
 - Displays a clear electricity bill receipt
 
-ðŸ“ [View Electricity Bill Calculator](Electricity-Bill-Calculator)
+📁 [View Electricity Bill Calculator](Electricity-Bill-Calculator)
 
 ---
 ### 6. Free Delivery Eligibility Checker
@@ -96,7 +96,7 @@ A beginner-friendly Java console application that checks whether an online shopp
 - Displays the final payable amount
 - Generates a formatted order summary
 
-ðŸ“ [View Free Delivery Eligibility Checker](Free-Delivery-Eligibility-Checker)
+📁 [View Free Delivery Eligibility Checker](Free-Delivery-Eligibility-Checker)
 
 ---
 ### 7. Mobile Data Usage Alert
@@ -113,7 +113,7 @@ A beginner-friendly Java console application that monitors mobile data consumpti
 - Validates incorrect input values
 - Generates a formatted data summary
 
-ðŸ“ [View Mobile Data Usage Alert](Mobile-Data-Usage-Alert)
+📁 [View Mobile Data Usage Alert](Mobile-Data-Usage-Alert)
 
 ---
 ### 8. Login Attempt Checker
@@ -130,7 +130,7 @@ A beginner-friendly Java console application that validates user credentials and
 - Locks access after repeated failures
 - Generates a formatted login status
 
-ðŸ“ [View Login Attempt Checker](Login-Attempt-Checker)
+📁 [View Login Attempt Checker](Login-Attempt-Checker)
 
 ---
 ### 9. Parking Fee Calculator
@@ -146,7 +146,7 @@ A beginner-friendly Java console application that calculates parking charges bas
 - Validates customer and parking details
 - Generates a formatted parking receipt
 
-ðŸ“ [View Parking Fee Calculator](Parking-Fee-Calculator)
+📁 [View Parking Fee Calculator](Parking-Fee-Calculator)
 
 ---
 ### 10. Water Bill Calculator
@@ -162,7 +162,7 @@ A beginner-friendly Java console application that calculates water charges using
 - Provides water-conservation suggestions
 - Generates a formatted water bill
 
-ðŸ“ [View Water Bill Calculator](Water-Bill-Calculator)
+📁 [View Water Bill Calculator](Water-Bill-Calculator)
 
 ---
 ### 11. Student Pass/Fail Checker
@@ -180,7 +180,7 @@ A beginner-friendly Java console application that evaluates subject marks and ge
 - Validates marks and student details
 - Generates a formatted result report
 
-ðŸ“ [View Student Pass/Fail Checker](Student-Pass-Fail-Checker)
+📁 [View Student Pass/Fail Checker](Student-Pass-Fail-Checker)
 
 ---
 ### 12. Speed Limit Checker
@@ -198,7 +198,7 @@ A beginner-friendly Java console application that detects overspeeding using roa
 - Provides road-safety guidance
 - Generates a formatted speed report
 
-ðŸ“ [View Speed Limit Checker](Speed-Limit-Checker)
+📁 [View Speed Limit Checker](Speed-Limit-Checker)
 
 ---
 ### 13. Blood Donation Eligibility Checker
@@ -216,7 +216,7 @@ An educational Java console application that performs a preliminary blood-donati
 - Validates donor input
 - Includes a professional medical-screening disclaimer
 
-ðŸ“ [View Blood Donation Eligibility Checker](Blood-Donation-Eligibility-Checker)
+📁 [View Blood Donation Eligibility Checker](Blood-Donation-Eligibility-Checker)
 
 ---
 ### 14. Scholarship Eligibility Checker
@@ -233,7 +233,7 @@ A Java console application that evaluates students for merit, need-based, and sp
 - Validates student information
 - Generates a formatted scholarship report
 
-ðŸ“ [View Scholarship Eligibility Checker](Scholarship-Eligibility-Checker)
+📁 [View Scholarship Eligibility Checker](Scholarship-Eligibility-Checker)
 
 ### 15. Job Eligibility Checker
 
@@ -248,11 +248,45 @@ A beginner-friendly Java console application that checks whether a candidate is 
 - Handles invalid age input
 - Displays clear eligibility status
 
-ðŸ“ [View Job Eligibility Checker](Job-Eligibility-Checker)
+📁 [View Job Eligibility Checker](Job-Eligibility-Checker)
 
 ---
 ---
-## ðŸ› ï¸ Technologies Used
+
+### 16. Cab Fare Calculator
+
+A beginner-friendly Java console application that calculates cab fare based on cab type, distance, and night ride charges.
+
+#### Key Features
+
+- Accepts passenger name and cab type
+- Calculates fare based on distance
+- Supports bike, auto, and car
+- Adds a night ride charge
+- Validates distance and cab type
+- Generates a formatted cab fare receipt
+
+📁 [View Cab Fare Calculator](Cab-Fare-Calculator)
+
+---
+
+### 17. Fever Checker
+
+A beginner-friendly Java console application that checks body temperature and displays a basic temperature status.
+
+#### Key Features
+
+- Accepts person's name and temperature
+- Checks normal, mild temperature, and fever ranges
+- Validates invalid temperature input
+- Uses simple `if-else` conditions
+- Displays a formatted temperature report
+
+📁 [View Fever Checker](Fever-Checker)
+
+---
+---
+## 🛠️ Technologies Used
 
 - Java 17
 - Visual Studio Code
@@ -260,17 +294,15 @@ A beginner-friendly Java console application that checks whether a candidate is 
 - GitHub
 - Windows PowerShell
 
-## ðŸ“ˆ Learning Progress
+## 📈 Learning Progress
 
 More Java projects will be added regularly as I continue improving my programming and problem-solving skills.
 
-## ðŸ‘©â€ðŸ’» Author
+## 👩‍💻 Author
 **Himaja Venkata Reddy**
 
-GitHub: [HimajaVentakaReddy](https://github.com/HimajaVentakaReddy)
-
----
-
-â­ If you find these projects helpful, consider giving this repository a star!
-
-
+GitHub: [HimajaVentakaReddy](https://github.com/HimajaVentakaReddy) 
+ 
+--- 
+ 
+⭐ If you find these projects helpful, consider giving this repository a star!

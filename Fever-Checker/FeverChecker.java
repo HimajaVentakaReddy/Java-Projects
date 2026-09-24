@@ -11,14 +11,17 @@ public class FeverChecker {
         System.out.print("Enter your temperature in Celsius: ");
         double temperature = sc.nextDouble();
 
-        if (temperature >= 38) {
-            System.out.println("You have a fever.");
-        } else {
-            System.out.println("You do not have a fever.");
-        }
-
+        System.out.println("\n--- Temperature Report ---");
         System.out.println("Name: " + name);
         System.out.println("Temperature: " + temperature + " C");
+
+        if (temperature < 37) {
+            System.out.println("Status: Normal");
+        } else if (temperature < 38) {
+            System.out.println("Status: Mild Temperature");
+        } else {
+            System.out.println("Status: Fever");
+        }
 
         sc.close();
     }

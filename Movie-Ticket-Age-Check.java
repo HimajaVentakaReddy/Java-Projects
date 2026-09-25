@@ -39,13 +39,26 @@ public class MovieTicketAgeCheck {
             return;
         }
 
+        double discount = 0;
+
+        if (age < 5) {
+            discount = 100;
+        } else if (age >= 60) {
+            discount = 10;
+        }
+
         double totalCost = ticketPrice * tickets;
+        double discountAmount = totalCost * discount / 100;
+        double finalCost = totalCost - discountAmount;
 
         System.out.println();
         System.out.println("--------- TICKET SUMMARY ---------");
-        System.out.printf("Ticket Price : Rs. %.2f%n", ticketPrice);
-        System.out.println("Tickets      : " + tickets);
-        System.out.printf("Total Cost   : Rs. %.2f%n", totalCost);
+        System.out.printf("Ticket Price   : Rs. %.2f%n", ticketPrice);
+        System.out.println("Tickets        : " + tickets);
+        System.out.printf("Total Cost     : Rs. %.2f%n", totalCost);
+        System.out.printf("Discount       : %.0f%%%n", discount);
+        System.out.printf("Discount Amount: Rs. %.2f%n", discountAmount);
+        System.out.printf("Final Cost     : Rs. %.2f%n", finalCost);
         System.out.println("----------------------------------");
         System.out.println("================================");
 

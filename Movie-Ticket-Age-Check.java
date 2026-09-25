@@ -17,8 +17,10 @@ public class MovieTicketAgeCheck {
             System.out.println("Ticket Status: Free entry for young children.");
         } else if (age < 18) {
             System.out.println("Ticket Status: Child/Teen ticket required.");
+            System.out.println("Ticket Price: Rs. 120");
         } else {
             System.out.println("Ticket Status: Adult ticket required.");
+            System.out.println("Ticket Price: Rs. 200");
         }
 
         System.out.println("================================");

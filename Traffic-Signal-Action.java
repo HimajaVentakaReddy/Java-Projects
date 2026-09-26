@@ -14,12 +14,19 @@ public class TrafficSignalAction {
         System.out.print("Is an emergency vehicle approaching? (yes/no): ");
         String emergency = scanner.nextLine();
 
+        System.out.print("Did the vehicle cross the signal? (yes/no): ");
+        String crossed = scanner.nextLine();
+
         if (signal.equalsIgnoreCase("red")) {
             System.out.println("Action: STOP");
             System.out.println("Signal Duration: 60 seconds");
 
             if (emergency.equalsIgnoreCase("yes")) {
                 System.out.println("Priority: Allow emergency vehicle to pass safely.");
+            }
+
+            if (crossed.equalsIgnoreCase("yes")) {
+                System.out.println("Warning: Signal violation detected.");
             }
         } else if (signal.equalsIgnoreCase("yellow")) {
             System.out.println("Action: WAIT");

@@ -14,12 +14,15 @@ public class TrafficSignalAction {
         if (signal.equalsIgnoreCase("red")) {
             System.out.println("Action: STOP");
             System.out.println("Signal Duration: 60 seconds");
+            System.out.println("Pedestrian Action: Cross only when safe.");
         } else if (signal.equalsIgnoreCase("yellow")) {
             System.out.println("Action: WAIT");
             System.out.println("Signal Duration: 5 seconds");
+            System.out.println("Pedestrian Action: Prepare to cross.");
         } else if (signal.equalsIgnoreCase("green")) {
             System.out.println("Action: GO");
             System.out.println("Signal Duration: 45 seconds");
+            System.out.println("Pedestrian Action: Wait for pedestrian signal.");
         } else {
             System.out.println("Invalid traffic signal color.");
         }

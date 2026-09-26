@@ -11,18 +11,22 @@ public class TrafficSignalAction {
         System.out.print("Enter traffic signal color: ");
         String signal = scanner.nextLine();
 
+        System.out.print("Is an emergency vehicle approaching? (yes/no): ");
+        String emergency = scanner.nextLine();
+
         if (signal.equalsIgnoreCase("red")) {
             System.out.println("Action: STOP");
             System.out.println("Signal Duration: 60 seconds");
-            System.out.println("Pedestrian Action: Cross only when safe.");
+
+            if (emergency.equalsIgnoreCase("yes")) {
+                System.out.println("Priority: Allow emergency vehicle to pass safely.");
+            }
         } else if (signal.equalsIgnoreCase("yellow")) {
             System.out.println("Action: WAIT");
             System.out.println("Signal Duration: 5 seconds");
-            System.out.println("Pedestrian Action: Prepare to cross.");
         } else if (signal.equalsIgnoreCase("green")) {
             System.out.println("Action: GO");
             System.out.println("Signal Duration: 45 seconds");
-            System.out.println("Pedestrian Action: Wait for pedestrian signal.");
         } else {
             System.out.println("Invalid traffic signal color.");
         }

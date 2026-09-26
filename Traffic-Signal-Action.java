@@ -38,6 +38,19 @@ public class TrafficSignalAction {
             System.out.println("Invalid traffic signal color.");
         }
 
+        System.out.println();
+        System.out.println("--------- SIGNAL SUMMARY ---------");
+        System.out.println("Signal Color       : " + signal);
+        System.out.println("Emergency Vehicle  : " + emergency);
+        System.out.println("Signal Crossed     : " + crossed);
+
+        if (signal.equalsIgnoreCase("red") && crossed.equalsIgnoreCase("yes")) {
+            System.out.println("Final Status       : VIOLATION");
+        } else {
+            System.out.println("Final Status       : NORMAL");
+        }
+
+        System.out.println("----------------------------------");
         System.out.println("================================");
 
         scanner.close();

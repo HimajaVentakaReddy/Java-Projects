@@ -24,8 +24,10 @@ public class WaterBillCalculator {
                     + (usage - 5000) * 0.05;
         }
 
-        System.out.println("Water Usage: " + usage + " liters");
-        System.out.println("Water Bill: Rs. " + bill);
+        System.out.println("\n----- Water Bill Summary -----");
+        System.out.println("Water Usage : " + usage + " liters");
+        System.out.println("Total Bill  : Rs. " + bill);
+        System.out.println("------------------------------");
 
         sc.close();
     }

@@ -78,3 +78,8 @@ Run:
 ## 🎯 Learning Outcome
 
 This project demonstrates how Java conditions, arithmetic calculations, validation, and formatted output can solve a practical utility-billing problem.
+## ? Latest Update
+
+- Added input validation
+- Added slab-based billing
+- Added water bill summary

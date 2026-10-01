@@ -9,6 +9,10 @@ public class TemperatureAlertChecker {
 
         System.out.println("Temperature: " + temperature + "°C");
 
+        if (temperature > 40) {
+            System.out.println("Alert: Very High Temperature!");
+        }
+
         sc.close();
     }
 }

@@ -7,7 +7,11 @@ public class TemperatureAlertChecker {
         System.out.print("Enter temperature in Celsius: ");
         double temperature = sc.nextDouble();
 
-        System.out.println("Temperature: " + temperature + "°C");
+        if (temperature < -100 || temperature > 100) {
+            System.out.println("Invalid temperature range.");
+            sc.close();
+            return;
+        }
 
         if (temperature > 40) {
             System.out.println("Alert: Very High Temperature!");

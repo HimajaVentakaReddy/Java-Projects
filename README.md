@@ -302,7 +302,6 @@ More Java projects will be added regularly as I continue improving my programmin
 **Himaja Venkata Reddy**
 
 GitHub: [HimajaVentakaReddy](https://github.com/HimajaVentakaReddy) 
- 
---- 
+ --- 
  
 ⭐ If you find these projects helpful, consider giving this repository a star!

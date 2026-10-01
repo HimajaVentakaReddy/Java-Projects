@@ -11,6 +11,10 @@ public class TemperatureAlertChecker {
 
         if (temperature > 40) {
             System.out.println("Alert: Very High Temperature!");
+        } else if (temperature < 10) {
+            System.out.println("Alert: Low Temperature!");
+        } else {
+            System.out.println("Temperature is Normal.");
         }
 
         sc.close();

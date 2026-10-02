@@ -13,13 +13,15 @@ public class BusFareCalculator {
         if (distance <= 0 || farePerKm <= 0) {
             System.out.println("Invalid distance or fare.");
         } else {
-            System.out.print("Enter passenger type (1-Adult, 2-Student): ");
+            System.out.print("Enter passenger type (1-Adult, 2-Student, 3-Senior Citizen): ");
             int type = sc.nextInt();
 
             double totalFare = distance * farePerKm;
 
             if (type == 2) {
                 totalFare = totalFare * 0.5;
+            } else if (type == 3) {
+                totalFare = totalFare * 0.6;
             }
 
             System.out.println("Total Bus Fare: Rs. " + totalFare);

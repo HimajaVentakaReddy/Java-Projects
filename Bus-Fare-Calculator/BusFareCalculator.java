@@ -10,9 +10,12 @@ public class BusFareCalculator {
         System.out.print("Enter fare per km: ");
         double farePerKm = sc.nextDouble();
 
-        double totalFare = distance * farePerKm;
-
-        System.out.println("Total Bus Fare: Rs. " + totalFare);
+        if (distance <= 0 || farePerKm <= 0) {
+            System.out.println("Invalid distance or fare.");
+        } else {
+            double totalFare = distance * farePerKm;
+            System.out.println("Total Bus Fare: Rs. " + totalFare);
+        }
 
         sc.close();
     }

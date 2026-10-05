@@ -20,6 +20,10 @@ public class LibraryFineCalculator {
                 fine = days * 5;
             }
 
+            if (fine > 50) {
+                fine = 50;
+            }
+
             System.out.println("Library Fine: Rs. " + fine);
         }
 

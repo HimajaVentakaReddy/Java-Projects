@@ -10,7 +10,16 @@ public class LibraryFineCalculator {
         if (days < 0) {
             System.out.println("Invalid number of days.");
         } else {
-            double fine = days * 2;
+            double fine;
+
+            if (days <= 5) {
+                fine = days * 2;
+            } else if (days <= 10) {
+                fine = days * 3;
+            } else {
+                fine = days * 5;
+            }
+
             System.out.println("Library Fine: Rs. " + fine);
         }
 

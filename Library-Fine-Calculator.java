@@ -7,9 +7,12 @@ public class LibraryFineCalculator {
         System.out.print("Enter number of late days: ");
         int days = sc.nextInt();
 
-        double fine = days * 2;
-
-        System.out.println("Library Fine: Rs. " + fine);
+        if (days < 0) {
+            System.out.println("Invalid number of days.");
+        } else {
+            double fine = days * 2;
+            System.out.println("Library Fine: Rs. " + fine);
+        }
 
         sc.close();
     }

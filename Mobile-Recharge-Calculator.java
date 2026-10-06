@@ -13,12 +13,17 @@ public class MobileRechargeCalculator {
             System.out.print("Enter plan type (1-Prepaid, 2-Data): ");
             int plan = sc.nextInt();
 
-            if (plan == 1) {
+            System.out.print("Enter validity days: ");
+            int days = sc.nextInt();
+
+            if (plan == 1 && days > 0) {
                 System.out.println("Prepaid Recharge: Rs. " + amount);
-            } else if (plan == 2) {
+                System.out.println("Validity: " + days + " days");
+            } else if (plan == 2 && days > 0) {
                 System.out.println("Data Recharge: Rs. " + amount);
+                System.out.println("Validity: " + days + " days");
             } else {
-                System.out.println("Invalid plan type.");
+                System.out.println("Invalid plan or validity.");
             }
         }
 

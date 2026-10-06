@@ -300,6 +300,7 @@ A beginner-friendly Java console application that checks body temperature and di
 More Java projects will be added regularly as I continue improving my programming and problem-solving skills.
 
 ## 👩‍💻 Author
+
 **Himaja Venkata Reddy**
 
 GitHub: [HimajaVentakaReddy](https://github.com/HimajaVentakaReddy) 

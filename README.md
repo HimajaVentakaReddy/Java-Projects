@@ -269,24 +269,7 @@ A beginner-friendly Java console application that calculates cab fare based on c
 
 📁 [View Cab Fare Calculator](Cab-Fare-Calculator)
 
----
 
-### 17. Fever Checker
-
-A beginner-friendly Java console application that checks body temperature and displays a basic temperature status.
-
-#### Key Features
-
-- Accepts person's name and temperature
-- Checks normal, mild temperature, and fever ranges
-- Validates invalid temperature input
-- Uses simple `if-else` conditions
-- Displays a formatted temperature report
-
-📁 [View Fever Checker](Fever-Checker)
-
----
----
 ## 🛠️ Technologies Used
 
 - Java 17

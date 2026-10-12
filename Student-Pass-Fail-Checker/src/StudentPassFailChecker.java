@@ -23,6 +23,25 @@ public class StudentPassFailChecker {
         }
     }
 
+    private static double readMarks(Scanner scanner, String subject) {
+        while (true) {
+            System.out.print("Enter " + subject + " marks (0-100): ");
+            String input = scanner.nextLine().trim();
+
+            try {
+                double marks = Double.parseDouble(input);
+
+                if (Double.isFinite(marks) && marks >= 0 && marks <= 100) {
+                    return marks;
+                }
+            } catch (NumberFormatException e) {
+                // Ask again when the input is not a valid number.
+            }
+
+            System.out.println(
+                    "Invalid input. Please enter a number between 0 and 100.");
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -36,20 +55,11 @@ public class StudentPassFailChecker {
         System.out.print("Enter USN: ");
         String usn = scanner.nextLine().trim().toUpperCase();
 
-        System.out.print("Enter Java marks: ");
-        double javaMarks = scanner.nextDouble();
-
-        System.out.print("Enter DBMS marks: ");
-        double dbmsMarks = scanner.nextDouble();
-
-        System.out.print("Enter Operating Systems marks: ");
-        double osMarks = scanner.nextDouble();
-
-        System.out.print("Enter DAA marks: ");
-        double daaMarks = scanner.nextDouble();
-
-        System.out.print("Enter Microcontroller marks: ");
-        double mcMarks = scanner.nextDouble();
+        double javaMarks = readMarks(scanner, "Java");
+        double dbmsMarks = readMarks(scanner, "DBMS");
+        double osMarks = readMarks(scanner, "Operating Systems");
+        double daaMarks = readMarks(scanner, "DAA");
+        double mcMarks = readMarks(scanner, "Microcontroller");
 
         if (studentName.isEmpty() || usn.isEmpty()) {
             System.out.println("\nInvalid input: Student name and USN are required.");

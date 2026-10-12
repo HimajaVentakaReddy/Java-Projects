@@ -16,7 +16,6 @@ Java, Scanner, if-else, arithmetic operations.
 javac -d out src/TravelBudgetChecker.java
 java -cp out TravelBudgetChecker
 ```
-
 ## Example
 Budget: Rs. 10000
 Total expenses: Rs. 7500

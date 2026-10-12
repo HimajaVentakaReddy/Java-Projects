@@ -5,7 +5,6 @@ A beginner-friendly Java console application that calculates parking fees using 
 ## 📌 Problem Statement
 
 Parking facilities charge different fees based on the type of vehicle and the number of hours parked. This application applies the correct vehicle-based rate and generates a clear parking receipt.
-
 ## ✨ Features
 
 - Accepts customer and vehicle details

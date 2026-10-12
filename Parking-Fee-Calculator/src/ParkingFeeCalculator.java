@@ -18,11 +18,39 @@ public class ParkingFeeCalculator {
         System.out.print("Enter vehicle number: ");
         String vehicleNumber = scanner.nextLine().trim().toUpperCase();
 
-        System.out.print("Select vehicle category (1-3): ");
-        int category = scanner.nextInt();
+        int category;
+        while (true) {
+            System.out.print("Select vehicle category (1-3): ");
+            String input = scanner.nextLine().trim();
 
-        System.out.print("Enter parking hours: ");
-        int parkingHours = scanner.nextInt();
+            try {
+                category = Integer.parseInt(input);
+                if (category >= 1 && category <= 3) {
+                    break;
+                }
+            } catch (NumberFormatException e) {
+                // Ask again when the input is not a whole number.
+            }
+
+            System.out.println("Invalid category. Enter 1, 2, or 3.");
+        }
+
+        int parkingHours;
+        while (true) {
+            System.out.print("Enter parking hours (positive whole number): ");
+            String input = scanner.nextLine().trim();
+
+            try {
+                parkingHours = Integer.parseInt(input);
+                if (parkingHours > 0) {
+                    break;
+                }
+            } catch (NumberFormatException e) {
+                // Ask again when the input is not a whole number.
+            }
+
+            System.out.println("Invalid hours. Enter a positive whole number.");
+        }
 
         if (customerName.isEmpty() || vehicleNumber.isEmpty()) {
             System.out.println("\nInvalid input: Customer name and vehicle number are required.");

@@ -5,7 +5,6 @@
 The Login Attempt Checker is a simple Java console application that verifies user credentials and limits login attempts to three.
 
 ## Features
-
 - Checks username and password
 - Allows a maximum of three login attempts
 - Displays remaining attempts after incorrect credentials

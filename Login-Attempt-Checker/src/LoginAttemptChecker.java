@@ -1,25 +1,52 @@
 import java.util.Scanner;
 
+class LoginSystem {
+    private final String correctUsername = "admin";
+    private final String correctPassword = "java123";
+    private int attempts = 0;
+    private final int maximumAttempts = 3;
+
+    public boolean isLocked() {
+        return attempts >= maximumAttempts;
+    }
+
+    public boolean login(String username, String password) {
+        if (isLocked()) {
+            System.out.println("Account is locked.");
+            return false;
+        }
+
+        attempts++;
+
+        if (correctUsername.equals(username)
+                && correctPassword.equals(password)) {
+            System.out.println("Login successful! Welcome, " + username + ".");
+            return true;
+        }
+
+        System.out.println("Login failed. Attempts used: " + attempts);
+
+        if (isLocked()) {
+            System.out.println("Account locked after maximum attempts.");
+        } else {
+            System.out.println("Attempts remaining: "
+                    + (maximumAttempts - attempts));
+        }
+
+        return false;
+    }
+}
+
 public class LoginAttemptChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        LoginSystem loginSystem = new LoginSystem();
 
-        final String correctUsername = "admin";
-        final String correctPassword = "java123";
-        final int maximumAttempts = 3;
+        System.out.println("==================================");
+        System.out.println("    OOP LOGIN ATTEMPT CHECKER");
+        System.out.println("==================================");
 
-        boolean loginSuccessful = false;
-        int attempt;
-
-        System.out.println("======================================");
-        System.out.println("        LOGIN ATTEMPT CHECKER");
-        System.out.println("======================================");
-        System.out.println("Maximum login attempts: " + maximumAttempts);
-
-        for (attempt = 1; attempt <= maximumAttempts; attempt++) {
-            System.out.println("\n---------- Attempt " + attempt + " of "
-                    + maximumAttempts + " ----------");
-
+        while (!loginSystem.isLocked()) {
             System.out.print("Enter username: ");
             String username = scanner.nextLine().trim();
 
@@ -27,39 +54,14 @@ public class LoginAttemptChecker {
             String password = scanner.nextLine();
 
             if (username.isEmpty() || password.isEmpty()) {
-                System.out.println("Login failed: Fields cannot be empty.");
-            } else if (username.equals(correctUsername)
-                    && password.equals(correctPassword)) {
-                loginSuccessful = true;
+                System.out.println("Username and password are required.");
+                continue;
+            }
 
-                System.out.println("\nLogin successful!");
-                System.out.println("Welcome, " + username + ".");
-                System.out.println("Logged in on attempt number " + attempt + ".");
+            if (loginSystem.login(username, password)) {
                 break;
-            } else {
-                int remainingAttempts = maximumAttempts - attempt;
-
-                System.out.println("Login failed: Invalid username or password.");
-
-                if (remainingAttempts > 0) {
-                    System.out.println("Remaining attempts: "
-                            + remainingAttempts);
-                }
             }
         }
-
-        System.out.println("\n------------ LOGIN STATUS ------------");
-
-        if (loginSuccessful) {
-            System.out.println("Status  : ACCESS GRANTED");
-            System.out.println("Security: User credentials verified");
-        } else {
-            System.out.println("Status  : ACCOUNT LOCKED");
-            System.out.println("Security: Maximum login attempts exceeded");
-            System.out.println("Action  : Contact the administrator");
-        }
-
-        System.out.println("======================================");
 
         scanner.close();
     }

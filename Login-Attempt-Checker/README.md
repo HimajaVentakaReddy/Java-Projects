@@ -1,72 +1,65 @@
-# 🔐 Login Attempt Checker
+# Login Attempt Checker - Java OOP Project
 
-A beginner-friendly Java console application that validates login credentials, controls repeated login attempts, and locks access after three failed attempts.
+## Project Overview
 
-## 📌 Problem Statement
+The Login Attempt Checker is a simple Java console application that verifies user credentials and limits login attempts to three.
 
-Login systems must prevent unlimited attempts from unauthorized users. This application checks a username and password, allows a maximum of three attempts, and locks access when all attempts fail.
+## Features
 
-## ✨ Features
-- Accepts username and password
-- Validates login credentials
-- Allows a maximum of three attempts
-- Displays the remaining attempts
-- Rejects empty input fields
-- Grants access for correct credentials
-- Locks access after three failed attempts
-- Displays a formatted login status
-- Uses secure combined error messages
+- Checks username and password
+- Allows a maximum of three login attempts
+- Displays remaining attempts after incorrect credentials
+- Locks the login process after three failed attempts
+- Uses encapsulation to protect login details and attempt count
 
-## 🔑 Test Credentials
+## OOP Concept Used
 
-| Field | Value |
-|---|---|
-| Username | `admin` |
-| Password | `java123` |
+### Encapsulation
 
-> These credentials are included only for demonstrating this beginner-level project.
+The `LoginSystem` class stores its credentials, attempt count, and maximum attempts in private fields. Public methods such as `login()` and `isLocked()` control access to the login functionality.
 
-## 🚦 Login Rules
+## Java Concepts Used
 
-| Condition | Result |
-|---|---|
-| Correct username and password | ✅ Access Granted |
-| Empty username or password | ⚠️ Invalid Input |
-| Incorrect credentials | ❌ Login Failed |
-| Three failed attempts | 🔒 Account Locked |
-
-## 🛠️ Java Concepts Used
-
+- Classes and objects
+- Private fields and public methods
+- Encapsulation
 - Scanner class
-- Variables and constants
-- String comparison
-- For loop
+- While loop
 - If-else statements
-- Logical operators
-- Boolean values
+- String comparison
 - Input validation
-- Formatted console output
+- Boolean values
 
-## 📂 Project Structure
+## Project Structure
 
 - `src/LoginAttemptChecker.java`
 - `README.md`
 
-## ▶️ How to Run
+## How to Run
+
+Open PowerShell from the repository root.
 
 Compile:
 
-`javac -d "Login-Attempt-Checker\out" "Login-Attempt-Checker\src\LoginAttemptChecker.java"`
+`javac -encoding UTF-8 -d "Login-Attempt-Checker\out" "Login-Attempt-Checker\src\LoginAttemptChecker.java"`
 
 Run:
 
 `java -cp "Login-Attempt-Checker\out" LoginAttemptChecker`
 
-## ⚙️ Requirements
+## Sample Login
 
-- Java Development Kit 17 or later
+Username: `admin`
+
+Password: `java123`
+
+Three incorrect login attempts lock the login process for that program run.
+
+## Requirements
+
+- Java Development Kit (JDK) 17 or later
 - Visual Studio Code, PowerShell, or Command Prompt
 
-## 🎯 Learning Outcome
+## Learning Outcome
 
-This project demonstrates how loops, conditions, string comparison, and input validation can be used to create a simple login security system.
+This project demonstrates how encapsulation can organize login-related data and methods into a class while using loops and conditions to control access attempts.

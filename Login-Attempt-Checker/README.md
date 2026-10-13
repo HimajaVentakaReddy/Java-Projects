@@ -7,7 +7,6 @@ A beginner-friendly Java console application that validates login credentials, c
 Login systems must prevent unlimited attempts from unauthorized users. This application checks a username and password, allows a maximum of three attempts, and locks access when all attempts fail.
 
 ## ✨ Features
-
 - Accepts username and password
 - Validates login credentials
 - Allows a maximum of three attempts

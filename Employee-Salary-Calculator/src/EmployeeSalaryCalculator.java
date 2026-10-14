@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Employee {
     protected String name;
     protected double basicSalary;

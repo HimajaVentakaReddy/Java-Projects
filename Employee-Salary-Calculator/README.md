@@ -31,7 +31,6 @@ A simple Java console application that calculates employee salary based on the e
 ## How to Run
 
 Compile from the repository root:
-
 `javac -encoding UTF-8 -d "Employee-Salary-Calculator\out" "Employee-Salary-Calculator\src\EmployeeSalaryCalculator.java"`
 
 Run:

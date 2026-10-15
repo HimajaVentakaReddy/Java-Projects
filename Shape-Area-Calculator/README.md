@@ -1,7 +1,6 @@
 # Shape Area Calculator
 
 ## Project Overview
-
 A simple Java console application that calculates the area of a circle or rectangle using object-oriented programming.
 
 ## Features

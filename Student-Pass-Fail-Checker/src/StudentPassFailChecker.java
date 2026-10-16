@@ -1,8 +1,15 @@
 import java.util.Scanner;
 
 public class StudentPassFailChecker {
+    private static final String[] SUBJECTS = {
+        "Java", "DBMS", "Operating Systems", "DAA", "Microcontroller"
+    };
+
+    private static final double PASS_MARKS = 35;
+    private static final double MAX_MARKS = 100;
+
     public static String getSubjectResult(double marks) {
-        return marks >= 35 ? "PASS" : "FAIL";
+        return marks >= PASS_MARKS ? "PASS" : "FAIL";
     }
 
     public static String getGrade(double average, boolean passedAll) {
@@ -31,17 +38,19 @@ public class StudentPassFailChecker {
             try {
                 double marks = Double.parseDouble(input);
 
-                if (Double.isFinite(marks) && marks >= 0 && marks <= 100) {
+                if (Double.isFinite(marks)
+                        && marks >= 0 && marks <= MAX_MARKS) {
                     return marks;
                 }
             } catch (NumberFormatException e) {
-                // Ask again when the input is not a valid number.
+                // Ask again if the input is invalid.
             }
 
             System.out.println(
                     "Invalid input. Please enter a number between 0 and 100.");
         }
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -55,50 +64,27 @@ public class StudentPassFailChecker {
         System.out.print("Enter USN: ");
         String usn = scanner.nextLine().trim().toUpperCase();
 
-        double javaMarks = readMarks(scanner, "Java");
-        double dbmsMarks = readMarks(scanner, "DBMS");
-        double osMarks = readMarks(scanner, "Operating Systems");
-        double daaMarks = readMarks(scanner, "DAA");
-        double mcMarks = readMarks(scanner, "Microcontroller");
-
         if (studentName.isEmpty() || usn.isEmpty()) {
-            System.out.println("\nInvalid input: Student name and USN are required.");
+            System.out.println(
+                    "Invalid input: Student name and USN are required.");
             scanner.close();
             return;
         }
 
-        if (javaMarks < 0 || javaMarks > 100
-                || dbmsMarks < 0 || dbmsMarks > 100
-                || osMarks < 0 || osMarks > 100
-                || daaMarks < 0 || daaMarks > 100
-                || mcMarks < 0 || mcMarks > 100) {
-            System.out.println("\nInvalid input: Marks must be between 0 and 100.");
-            scanner.close();
-            return;
-        }
-
-        double totalMarks = javaMarks + dbmsMarks + osMarks
-                + daaMarks + mcMarks;
-        double averageMarks = totalMarks / 5;
-
+        double[] marks = new double[SUBJECTS.length];
+        double totalMarks = 0;
         int failedSubjects = 0;
 
-        if (javaMarks < 35) {
-            failedSubjects++;
-        }
-        if (dbmsMarks < 35) {
-            failedSubjects++;
-        }
-        if (osMarks < 35) {
-            failedSubjects++;
-        }
-        if (daaMarks < 35) {
-            failedSubjects++;
-        }
-        if (mcMarks < 35) {
-            failedSubjects++;
+        for (int i = 0; i < SUBJECTS.length; i++) {
+            marks[i] = readMarks(scanner, SUBJECTS[i]);
+            totalMarks += marks[i];
+
+            if (marks[i] < PASS_MARKS) {
+                failedSubjects++;
+            }
         }
 
+        double averageMarks = totalMarks / SUBJECTS.length;
         boolean passedAllSubjects = failedSubjects == 0;
         String grade = getGrade(averageMarks, passedAllSubjects);
 
@@ -106,18 +92,15 @@ public class StudentPassFailChecker {
         System.out.println("Student Name      : " + studentName);
         System.out.println("USN               : " + usn);
         System.out.println("-------------------------------------------");
-        System.out.printf("Java              : %6.2f  %s%n",
-                javaMarks, getSubjectResult(javaMarks));
-        System.out.printf("DBMS              : %6.2f  %s%n",
-                dbmsMarks, getSubjectResult(dbmsMarks));
-        System.out.printf("Operating Systems : %6.2f  %s%n",
-                osMarks, getSubjectResult(osMarks));
-        System.out.printf("DAA               : %6.2f  %s%n",
-                daaMarks, getSubjectResult(daaMarks));
-        System.out.printf("Microcontroller   : %6.2f  %s%n",
-                mcMarks, getSubjectResult(mcMarks));
+
+        for (int i = 0; i < SUBJECTS.length; i++) {
+            System.out.printf("%-19s: %6.2f  %s%n",
+                    SUBJECTS[i], marks[i], getSubjectResult(marks[i]));
+        }
+
         System.out.println("-------------------------------------------");
-        System.out.printf("Total Marks       : %.2f / 500%n", totalMarks);
+        System.out.printf("Total Marks       : %.2f / %.0f%n",
+                totalMarks, MAX_MARKS * SUBJECTS.length);
         System.out.printf("Average Percentage: %.2f%%%n", averageMarks);
         System.out.println("Failed Subjects   : " + failedSubjects);
         System.out.println("Grade             : " + grade);
@@ -140,7 +123,6 @@ public class StudentPassFailChecker {
         }
 
         System.out.println("===========================================");
-
         scanner.close();
     }
 }

@@ -49,7 +49,6 @@ public class EmployeeAttendanceTracker {
         System.out.println("Days Present  : " + daysPresent);
         System.out.println("Days Absent   : " + daysAbsent);
         System.out.printf("Attendance    : %.2f%%%n", attendancePercentage);
-
         if (attendancePercentage >= 75) {
             System.out.println("Status        : Good Attendance");
         } else {

@@ -27,7 +27,10 @@ Compile from the repository root:
 `javac -encoding UTF-8 -d "Bank-Account-Management-System\out" "Bank-Account-Management-System\src\BankAccountManagementSystem.java"`
 
 Run:
+## Requirements
+- JDK 17 or later
 
+## Learning Outcome
 `java -cp "Bank-Account-Management-System\out" BankAccountManagementSystem`
 
 

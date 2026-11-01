@@ -77,7 +77,38 @@ public class BankAccountManagementSystem {
 
             String choice = scanner.nextLine().trim();
 
-           
+           switch (choice) {
+                case "1":
+                    System.out.print("Enter deposit amount: ");
+                    try {
+                        account.deposit(Double.parseDouble(scanner.nextLine().trim()));
+                    } catch (NumberFormatException e) {
+                        System.out.println("Please enter a valid amount.");
+                    }
+                    break;
+
+                case "2":
+                    System.out.print("Enter withdrawal amount: ");
+                    try {
+                        account.withdraw(Double.parseDouble(scanner.nextLine().trim()));
+                    } catch (NumberFormatException e) {
+                        System.out.println("Please enter a valid amount.");
+                    }
+                    break;
+
+                case "3":
+                    account.displayBalance();
+                    break;
+
+                case "4":
+                    running = false;
+                    System.out.println("Thank you for using the bank system.");
+                    break;
+
+                default:
+                    System.out.println("Invalid option. Choose 1-4.");
+            }
+        } 
 
         scanner.close();
     }

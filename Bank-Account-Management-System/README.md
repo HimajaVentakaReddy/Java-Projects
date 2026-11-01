@@ -30,8 +30,5 @@ Run:
 
 `java -cp "Bank-Account-Management-System\out" BankAccountManagementSystem`
 
-## Requirements
-- JDK 17 or later
 
-## Learning Outcome
 Practice Java classes, objects, encapsulation, methods, loops, and input validation.

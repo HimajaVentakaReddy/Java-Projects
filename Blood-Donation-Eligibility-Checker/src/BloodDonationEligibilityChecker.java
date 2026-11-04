@@ -4,20 +4,7 @@ public class BloodDonationEligibilityChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("==========================================");
-        System.out.println("    BLOOD DONATION ELIGIBILITY CHECKER");
-        System.out.println("==========================================");
-        System.out.println("Educational pre-screening only.");
-        System.out.println("Final eligibility requires medical screening.");
-
-        System.out.print("\nEnter donor name: ");
-        String donorName = scanner.nextLine().trim();
-
-        System.out.print("Enter donor age: ");
-        int age = scanner.nextInt();
-
-        System.out.print("Enter donor weight in kg: ");
-        double weight = scanner.nextDouble();
+      ;
 
         System.out.print("Enter haemoglobin level in g/dL: ");
         double haemoglobin = scanner.nextDouble();

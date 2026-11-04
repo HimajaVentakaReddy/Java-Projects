@@ -4,7 +4,18 @@ public class ExamEligibilityChecker {
 
     public static void main(String[] args) {
 
-       
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("==================================");
+        System.out.println("     EXAM ELIGIBILITY CHECKER");
+        System.out.println("==================================");
+
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter student USN: ");
+        String usn = scanner.nextLine();
+
         System.out.print("Enter attendance percentage: ");
         double attendance = scanner.nextDouble();
 

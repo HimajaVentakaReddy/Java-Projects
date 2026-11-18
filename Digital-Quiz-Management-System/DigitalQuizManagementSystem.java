@@ -1,4 +1,8 @@
+import java.util.Scanner;
 
+public class DigitalQuizManagementSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         String[] questions = {
             "Which language is used for Android development?",

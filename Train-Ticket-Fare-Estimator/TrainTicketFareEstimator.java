@@ -1,4 +1,8 @@
+import java.util.Scanner;
 
+public class TrainTicketFareEstimator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("===== TRAIN TICKET FARE ESTIMATOR =====");
 

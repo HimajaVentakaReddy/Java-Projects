@@ -1,3 +1,8 @@
+import java.util.Scanner;
+
+public class DailyTaskPriorityPlanner {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("===== DAILY TASK PRIORITY PLANNER =====");
 

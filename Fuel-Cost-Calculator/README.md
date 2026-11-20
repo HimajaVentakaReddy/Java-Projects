@@ -15,3 +15,4 @@ Java, Scanner, if-else, arithmetic operations.
 javac -d out src/FuelCostCalculator.java
 java -cp out FuelCostCalculator
 ```
+Fuel!!

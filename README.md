@@ -13,7 +13,6 @@ Learning some java projects can see above!!!
 - Git
 - GitHub
 - Windows PowerShell
-- AI
 
 ## 📈 Learning Progress
 

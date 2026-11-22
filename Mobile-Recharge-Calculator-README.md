@@ -1,4 +1,4 @@
-# ?? Mobile Recharge Calculator
+#  Mobile Recharge Calculator
 
 A simple Java program to calculate and display mobile recharge details.
 

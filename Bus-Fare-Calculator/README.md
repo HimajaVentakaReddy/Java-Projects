@@ -1,4 +1,4 @@
-# ?? Bus Fare Calculator
+# Bus Fare Calculator
 
 A simple Java program to calculate bus fare based on distance, fare per kilometer, and passenger type.
 

@@ -1,3 +1,8 @@
+import java.util.Scanner;
+
+public class MobileChargingTimeEstimator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter battery capacity (mAh): ");
         double capacity = sc.nextDouble();
